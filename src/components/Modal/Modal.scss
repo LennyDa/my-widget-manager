@@ -1,0 +1,125 @@
+@import 'src/assets/styles/commonStyle';
+
+.widget-modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity .3s;
+
+  @include phone-landscape {
+    justify-content: flex-start;
+  }
+
+
+  &.open {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .widget-modal {
+    display: flex;
+    flex-direction: column;
+    z-index: 30;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0, .8);
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 450px;
+    transition: opacity .3s;
+
+    @include phone-landscape {
+      margin: 30px auto;
+    }
+
+    @include phone-portrait {
+      min-width: auto;
+      width: 90%;
+    }
+
+    &__details {
+      padding-top: 10px;
+      font-size: 18px;
+
+      .widget-name, .widget-id {
+        margin-bottom: 10px;
+        &__title {
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      .widget-items-title {
+        font-weight: 600;
+      }
+
+      .widget-items {
+        list-style: none;
+        padding: 10px;
+
+        label {
+          margin-right: 5px;
+          width: 10px;
+        }
+
+        .item {
+          margin-left: 10px;
+        }
+      }
+
+      .col-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 210px;
+        margin-bottom: 25px;
+
+        label {
+          font-weight: 600;
+        }
+
+        .invalid {
+          &+.invalid-feedback {
+            display: flex;
+            position: absolute;
+            top: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .close-btn {
+    align-self: flex-end;
+    font-size: 30px;
+    outline: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .save-btn {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include blue-btn();
+  }
+}
+

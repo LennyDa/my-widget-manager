@@ -1,0 +1,25 @@
+@import 'src/assets/styles/commonStyle';
+
+.widget-manager-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  height: inherit;
+
+  .widget-manager {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 30px;
+
+    @include phone-portrait {
+      flex-direction: column;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 15vh;
+    }
+  }
+}

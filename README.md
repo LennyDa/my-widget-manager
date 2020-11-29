@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+#### Start my-widget-manager
+<pre>
+npm i 
+npm start;
+</pre>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Components 
+<pre>
+App - main wrapper.
 
-## Available Scripts
+Widget Manager - initiates app page. 
+Includes all components and has the functionality to control and pass states to children.
 
-In the project directory, you can run:
+Modal - form to allow the user edit existing widget or add new one.
+Modal is rendered in portal in order to keep on proper functionality of the component as a popup.
 
-### `npm start`
+View - shows current widget on the right side of the page. Includes edit button for viewed widget.
+Includes simple test for rendered values of fields.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+WidgetList - manages the widget list.
+Allow the user to edit, view and delete existing widget or add new one.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+EditButton - reusable component for widget edit. In use in List component and view component.
 
-### `npm test`
+</pre>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Hooks
+<pre>
+useLocalStorage - used in order to save user data.      
+</pre>
 
-### `npm run build`
+#### Utils
+<pre>
+modalUtils - includes checks of name and number in modal form.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+viewUtils - includes small package for translating magic number to words for view component.
+</pre>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###assets
+<pre>
+images - all images are Bootstrap svg icons for add/edit/view/delete options in the app. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+styles/_commonStyle - includes mixins for buttons and breakpoints: phone-landscape and
+phone-portrait.
 
-### `npm run eject`
+</pre>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,55 @@
+@mixin blue-btn {
+  background-color: #0088ff;
+  border: 1px solid #0088ff;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  outline: none;
+
+  &:hover {
+    background-color: #004d99;
+    color: #fff;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  .icon {
+    margin-left: 5px;
+  }
+
+  .btn-text {
+    vertical-align: middle;
+  }
+
+}
+
+@mixin list-btn {
+  .btn {
+    outline: none;
+    border: 0;
+    color: #0088ff;
+    background-color: transparent;
+    padding: 0 10px 0 0;
+
+    &:hover {
+      color: #004d99;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@mixin phone-portrait {
+  @media (max-width: 600px )  { @content; }
+}
+
+@mixin phone-landscape {
+  @media (max-height: 411px) and (max-width: 823px) { @content; }
+}
+

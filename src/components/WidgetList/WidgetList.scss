@@ -1,0 +1,44 @@
+@import 'src/assets/styles/commonStyle';
+
+.widget-list-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 280px;
+
+
+  .widget-list-wrapper {
+    align-items: flex-start;
+    height: 330px;
+  }
+
+  .widget-list {
+    list-style: none;
+    padding-left: 15px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;
+    overflow: auto;
+
+    .widget {
+      padding: 10px 0 5px;
+
+      &__name {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    @include list-btn();
+  }
+
+  .add-btn {
+    padding-left: 15px;
+    margin-top: 14px;
+    align-self: flex-end;
+
+    @include blue-btn();
+  }
+}
