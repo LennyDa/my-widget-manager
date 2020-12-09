@@ -77,8 +77,15 @@
           width: 10px;
         }
 
-        .item {
-          margin-left: 10px;
+        .item-container {
+          display: flex;
+
+          .item-details {
+            .key {
+              margin: 0 5px 5px 0;
+            }
+            margin-bottom: 10px;
+          }
         }
       }
 

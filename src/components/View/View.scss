@@ -44,7 +44,18 @@
 
     &__items {
       .items-wrapper {
-        padding-left: 20px;
+        padding-left: 0;
+        list-style: none;
+
+        .item-container {
+          margin-bottom: 10px;
+        }
+
+        .key, .item {
+          &__title {
+            font-weight: 600;
+          }
+        }
       }
     }
 

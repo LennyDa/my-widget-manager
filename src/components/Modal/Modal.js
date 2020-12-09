@@ -38,14 +38,15 @@ const Modal = ({ props }) => {
         setEditWidget(null);
     }
 
-    const handleWidgetItems = key => e => {
+    const handleWidgetItems = (key, type) => e => {
         let tempItemsArray = {...items};
-        if (e.target.value === '') {
+        if (e.target.value === '')  delete tempItemsArray[key][type];
+        tempItemsArray[key] = {...tempItemsArray[key], [type]: e.target.value};
+
+        if (tempItemsArray[key] === {}) {
             delete tempItemsArray[key];
         }
-        else {
-            tempItemsArray[key] = e.target.value;
-        }
+
         setItems(tempItemsArray);
     }
 
