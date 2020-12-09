@@ -43,7 +43,7 @@ const Modal = ({ props }) => {
         if (e.target.value === '')  delete tempItemsArray[key][type];
         tempItemsArray[key] = {...tempItemsArray[key], [type]: e.target.value};
 
-        if (tempItemsArray[key] === {}) {
+        if (tempItemsArray[key].key === '' && tempItemsArray[key].item  === '') {
             delete tempItemsArray[key];
         }
 
